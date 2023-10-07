@@ -41,7 +41,7 @@ async def save_file(media):
         file = Media(
             file_id=file_id,
             file_ref=file_ref,
-            file_name=file_name,
+            file_name=media.caption.html if media.caption else file_name,
             file_size=media.file_size,
             file_type=media.file_type,
             mime_type=media.mime_type, 
